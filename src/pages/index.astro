@@ -1,0 +1,91 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
+import Contact from "../components/Contact.astro";
+import Mensaje from "../components/icons/Mensaje.astro";
+---
+
+<Layout
+  title="Portfolio Lisandro Carrieri"
+  description="Desarrollador Front-End enfocado en el diseño y funcionalidad de todos los detalles"
+>
+  <main class="px-4">
+    <SectionContainer
+      class="py-10 pb-32 flex sm:flex-col sm:justify-center md:flex-row"
+    >
+      <img
+        class="flex mb-5 w-80 fr-1 sm:mx-auto"
+        src="/Profilepicircle.png"
+        alt="Foto de perfil Lisandro Carrieri"
+      />
+      <section class="fr-2 flex flex-col justify-around sm:justify-center">
+        <h1
+          class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 sm:text-center sm:mx-auto md:mx-0"
+        >
+          Lisandro Carrieri
+        </h1>
+        <h2
+          class="text-xl lg:text-2xl text-balance max-w-[700px] sm:text-center md:text-left"
+        >
+          <span>Desarrollador Front-End.</span><span class="text-yellow-200">
+            Graduado de Técnico superior en multimedia</span
+          >
+          <br /><span class="text-red-200">
+            Apasionado por las cosas bien hechas</span
+          >. <br />
+
+          <span class="text-sky-200"></span>
+        </h2>
+
+        <nav
+          class="flex gap-4 flex-wrap sm:justify-center md:justify-start sm:mt-4"
+        >
+          <SocialPill href="https://www.linkedin.com/in/lisandrocarrieri/">
+            <LinkedInIcon class="size-4 md:size-6" />
+            LinkedIn
+          </SocialPill>
+          <SocialPill href="https://github.com/LICHICARCRIERI">
+            <GitHubIcon class="size-4 md:size-6" />
+            GitHub
+          </SocialPill>
+          <SocialPill href="mailto:lisandrocarrieri@gmail.com">
+            <MailIcon class="size-4 md:size-6" />
+            Lisandrocarrieri@gmail.com
+          </SocialPill>
+        </nav>
+      </section>
+    </SectionContainer>
+
+    <SectionContainer id="proyectos">
+      <h2 class="text-3xl font-semibold -mb-4 flex gap-x-3 items-center">
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer class="-mb-10" id="experiencia">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Briefcase class="size-7" />
+        Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer class="-mb-10" id="contacto">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <Mensaje class="size-7" />
+        Comencemos a hablar
+      </h2>
+      <Contact />
+    </SectionContainer>
+  </main>
+</Layout>
